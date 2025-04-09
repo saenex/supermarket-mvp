@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Supermarket_mvp.Models;
+
 
 namespace Supermarket_mvp.Models
 {
-    interface IPayModeRepository
-    {
-        void Add (PayModeModel payModeModel);
-        void Edit (PayModeModel payModeModel);
+    internal interface IPayModeRepository
+        { 
+        void Add(PayModeModel payModeModel);
+        void Edit(PayModeModel payModeModel);
         void Delete(int id);
         IEnumerable<PayModeModel> GetAll();
-        IEnumerable<PayModeModel> GetByValues(string value);
+        IEnumerable<PayModeModel> GetByValue(string value);
 
+        }
     }
-}

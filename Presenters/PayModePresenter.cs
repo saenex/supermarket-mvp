@@ -72,7 +72,7 @@ namespace Supermarket_mvp.Presenters
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
             if (emptyValue == false)
             {
-                payModeList = repository.GetByValues(this.view.SearchValue);
+                payModeList = repository.GetByValue(this.view.SearchValue);
             }
             else
             {
