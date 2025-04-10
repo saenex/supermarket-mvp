@@ -9,8 +9,8 @@ namespace Supermarket_mvp.Views
     interface IMainView
     {
         event EventHandler ShowPayModeView;
-        event EventHandler ShowProductsView;
-        event EventHandler ShowCustomersView;
+        event EventHandler ShowProductView;
+        event EventHandler ShowCustomerView;
         //Los demás
     }
 }

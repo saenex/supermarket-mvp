@@ -122,6 +122,7 @@
             // 
             // BtnClose
             // 
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.BackColor = Color.FromArgb(224, 224, 224);
             BtnClose.ForeColor = SystemColors.ButtonShadow;
             BtnClose.Image = Properties.Resources.cerrar;
@@ -133,6 +134,7 @@
             // 
             // BtnDelete
             // 
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.BackColor = Color.FromArgb(224, 224, 224);
             BtnDelete.ForeColor = SystemColors.ButtonShadow;
             BtnDelete.Image = Properties.Resources.delete;
@@ -145,6 +147,7 @@
             // 
             // BtnEdit
             // 
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.BackColor = Color.FromArgb(224, 224, 224);
             BtnEdit.ForeColor = SystemColors.ButtonShadow;
             BtnEdit.Image = Properties.Resources.edit;
@@ -156,6 +159,7 @@
             // 
             // BtnNew
             // 
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnNew.BackColor = Color.FromArgb(224, 224, 224);
             BtnNew.ForeColor = SystemColors.ButtonShadow;
             BtnNew.Image = Properties.Resources._new;
@@ -169,6 +173,7 @@
             // 
             DgPayMode.AllowUserToAddRows = false;
             DgPayMode.AllowUserToDeleteRows = false;
+            DgPayMode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             DgPayMode.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgPayMode.Location = new Point(13, 81);
@@ -180,6 +185,7 @@
             // 
             // BtnSearch
             // 
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.BackColor = Color.FromArgb(224, 224, 224);
             BtnSearch.Font = new Font("Segoe UI", 11F);
             BtnSearch.ForeColor = SystemColors.ActiveBorder;
@@ -192,6 +198,7 @@
             // 
             // TxtSearch
             // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(5, 38);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to search";
