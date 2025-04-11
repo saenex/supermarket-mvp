@@ -301,6 +301,7 @@
             TxtPayModeId.BorderStyle = BorderStyle.FixedSingle;
             TxtPayModeId.Location = new Point(28, 62);
             TxtPayModeId.Name = "TxtPayModeId";
+            TxtPayModeId.ReadOnly = true;
             TxtPayModeId.RightToLeft = RightToLeft.No;
             TxtPayModeId.Size = new Size(219, 27);
             TxtPayModeId.TabIndex = 1;

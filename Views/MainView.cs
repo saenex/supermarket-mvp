@@ -23,10 +23,5 @@ namespace Supermarket_mvp.Views
         public event EventHandler ShowPayModeView;
         public event EventHandler ShowProductView;
         public event EventHandler ShowCustomerView;
-
-        private void MainView_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

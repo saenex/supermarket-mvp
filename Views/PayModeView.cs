@@ -53,6 +53,13 @@ namespace Supermarket_mvp.Views
             set { message = value; }
         }
 
+        string IPayModeView.Message
+        {
+            get => Message;
+            set => Message = value;
+        }
+
+
         public PayModeView()
         {
             InitializeComponent();
@@ -65,7 +72,7 @@ namespace Supermarket_mvp.Views
 
         private void BtnClose_Click(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -79,11 +86,51 @@ namespace Supermarket_mvp.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
-        }
+            //Agregar llame el evento AddNewEvent cuándo se haga click en el botón BtnNew
+            BtnNew.Click += delegate
+            {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+
+
+                tabControl1.TabPages.Remove(tabPagePayModeList);
+                tabControl1.TabPages.Add(tabPagePayModeDetail);
+                tabPagePayModeDetail.Text = "Add new Pay Mode"; //Cambiaa el titulo de la 
+            };                                          // pestaña
+
+                BtnEdit.Click += delegate { EditEvent?.Invoke(this, EventArgs.Empty); };
+
+                BtnDelete.Click += delegate 
+                {
+
+                    var result = MessageBox.Show(
+                        "Are you sure you want to delete the select Pay Mode",
+                        "Warning",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        DeleteEvent?.Invoke(this, EventArgs.Empty);
+                        MessageBox.Show(Message);
+                    }
+                };
+
+                BtnSave.Click += delegate 
+                { SaveEvent?.Invoke(this, EventArgs.Empty);
+
+                    if (isSuccessful) //SI grabar fue exitoso
+                    { 
+                    tabControl1.TabPages.Remove(tabPagePayModeDetail);
+                        tabControl1.TabPages.Add(tabPagePayModeList);
+                    }
+
+                    MessageBox.Show(Message);
+                };
+
+                BtnCancel.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
+            }
 
         private void BtnSearch_ClickHandler(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         public event EventHandler SearchEvent;
