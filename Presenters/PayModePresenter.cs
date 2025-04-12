@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Supermarket_mvp.Views;
 using Supermarket_mvp.Models;
+using Supermarket_mvp.Presenters.Common;
 
 namespace Supermarket_mvp.Presenters
 {
@@ -51,32 +52,34 @@ namespace Supermarket_mvp.Presenters
         {
             // Se crea un objeto de la clase PayModeModel y se asigno los datos 
             // de las cajas de un texto de la vista
-            var payMode = new PayModeModel();
-            payMode.Id = Convert.ToInt32(view.PayModeId);
-            payMode.Name = view.PayModeName;
-            payMode.Observation = view.PayModeObservation;
+            var model = new PayModeModel();
+            model.Id = Convert.ToInt32(view.PayModeId);
+            model.Name = view.PayModeName;
+            model.Observation = view.PayModeObservation;
 
             try
             {
-                new Common.ModelDataValidation().Validate(payMode);
+                new ModelDataValidation().Validate(model); // valida los campos
                 if (view.IsEdit)
                 {
-                    repository.Edit(payMode);
-                    view.Message = "PayMode edited succesfuly";
+                    repository.Edit(model);
+                    view.Message = "PayMode actualizado correctamente";
                 }
                 else
                 {
-                    repository.Add(payMode);
-                    view.Message = "PayMode added succesfuly";
+                    repository.Add(model);
+                    view.Message = "PayMode agregado correctamente";
                 }
+                view.IsSuccessful = false;
+                LoadAllPayModeList();
+                CleanViewFields();
             }
             catch (Exception ex)
             {
                 // Si ocurre una exepción se configura IsSuccesfull en false 
                 //y a la propiedad Message se le asigna el mensaje de la exception
-                view.IsSuccessful = true;
+                view.IsSuccessful = false;
                 LoadAllPayModeList();
-                CleanViewFields();
             }
         }
 

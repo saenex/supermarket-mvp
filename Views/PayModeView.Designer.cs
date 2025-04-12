@@ -279,6 +279,7 @@
             // 
             TxtPayModeName.BorderStyle = BorderStyle.FixedSingle;
             TxtPayModeName.Location = new Point(28, 134);
+            TxtPayModeName.Multiline = true;
             TxtPayModeName.Name = "TxtPayModeName";
             TxtPayModeName.PlaceholderText = "Pay Mode Name";
             TxtPayModeName.RightToLeft = RightToLeft.No;
@@ -300,11 +301,14 @@
             // 
             TxtPayModeId.BorderStyle = BorderStyle.FixedSingle;
             TxtPayModeId.Location = new Point(28, 62);
+            TxtPayModeId.Multiline = true;
             TxtPayModeId.Name = "TxtPayModeId";
             TxtPayModeId.ReadOnly = true;
             TxtPayModeId.RightToLeft = RightToLeft.No;
             TxtPayModeId.Size = new Size(219, 27);
             TxtPayModeId.TabIndex = 1;
+            TxtPayModeId.Text = "0";
+            TxtPayModeId.TextAlign = HorizontalAlignment.Right;
             // 
             // label3
             // 

@@ -58,6 +58,7 @@ namespace Supermarket_mvp.Views
             get => Message;
             set => Message = value;
         }
+     
 
 
         public PayModeView()
@@ -114,15 +115,19 @@ namespace Supermarket_mvp.Views
                 };
 
                 BtnSave.Click += delegate 
-                { SaveEvent?.Invoke(this, EventArgs.Empty);
+                {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
 
                     if (isSuccessful) //SI grabar fue exitoso
-                    { 
-                    tabControl1.TabPages.Remove(tabPagePayModeDetail);
+                    {
+                        MessageBox.Show(Message);
+                        tabControl1.TabPages.Remove(tabPagePayModeDetail);
                         tabControl1.TabPages.Add(tabPagePayModeList);
                     }
-
-                    MessageBox.Show(Message);
+                    else { 
+                      MessageBox.Show(Message);
+                    }
+                      
                 };
 
                 BtnCancel.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
