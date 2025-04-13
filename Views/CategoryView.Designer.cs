@@ -216,6 +216,7 @@
             // 
             DgCategory.AllowUserToAddRows = false;
             DgCategory.AllowUserToDeleteRows = false;
+            DgCategory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgCategory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgCategory.Location = new Point(197, 98);
             DgCategory.Name = "DgCategory";
@@ -350,6 +351,7 @@
             Margin = new Padding(4);
             Name = "CategoryView";
             Text = "Category Management";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
