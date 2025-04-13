@@ -32,19 +32,21 @@
             BtnExit = new Button();
             BtnPayMode = new Button();
             pictureBox1 = new PictureBox();
+            BtnCategory = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtnCategory);
             panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtnPayMode);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 450);
+            panel1.Size = new Size(250, 643);
             panel1.TabIndex = 0;
             // 
             // BtnExit
@@ -52,7 +54,7 @@
             BtnExit.BackgroundImage = Properties.Resources.cerrar_sesion;
             BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
             BtnExit.Dock = DockStyle.Bottom;
-            BtnExit.Location = new Point(0, 348);
+            BtnExit.Location = new Point(0, 541);
             BtnExit.Name = "BtnExit";
             BtnExit.Size = new Size(250, 102);
             BtnExit.TabIndex = 2;
@@ -64,7 +66,7 @@
             BtnPayMode.BackgroundImageLayout = ImageLayout.Zoom;
             BtnPayMode.Location = new Point(0, 61);
             BtnPayMode.Name = "BtnPayMode";
-            BtnPayMode.Size = new Size(250, 113);
+            BtnPayMode.Size = new Size(250, 130);
             BtnPayMode.TabIndex = 1;
             BtnPayMode.UseVisualStyleBackColor = true;
             // 
@@ -78,11 +80,21 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // BtnCategory
+            // 
+            BtnCategory.BackgroundImage = Properties.Resources.dieta;
+            BtnCategory.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnCategory.Location = new Point(0, 206);
+            BtnCategory.Name = "BtnCategory";
+            BtnCategory.Size = new Size(250, 130);
+            BtnCategory.TabIndex = 2;
+            BtnCategory.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 643);
             Controls.Add(panel1);
             IsMdiContainer = true;
             Name = "MainView";
@@ -99,5 +111,6 @@
         private Button BtnPayMode;
         private PictureBox pictureBox1;
         private Button BtnExit;
+        private Button BtnCategory;
     }
 }
