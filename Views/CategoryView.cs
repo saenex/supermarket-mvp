@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Supermarket_mvp.Views
 {
-    public partial class CategoriesView : Form
+    public partial class CategoryView: Form
     {
-        public CategoriesView()
+        public CategoryView()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
